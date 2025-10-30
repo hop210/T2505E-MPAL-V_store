@@ -8,31 +8,56 @@ $item = $stmt->fetch(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Update Item</title>
+  <meta charset="utf-8">
+  <title>Edit Item - V_Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <h2>Update Item</h2>
-  <form method="POST" action="../backend/update_item.php">
-    <input type="hidden" name="id" value="<?= $item['id'] ?>">
-    <label>Item Code:</label><br>
-    <input type="text" name="item_code" value="<?= $item['item_code'] ?>" required><br>
 
-    <label>Item Name:</label><br>
-    <input type="text" name="item_name" value="<?= $item['item_name'] ?>" required><br>
+  <!-- Header -->
+  <div class="header-band">
+    <div class="header-inner">
+      <span>V_Store</span>
+      <span>Items</span>
+    </div>
+  </div>
 
-    <label>Quantity:</label><br>
-    <input type="number" step="0.01" name="quantity" value="<?= $item['quantity'] ?>"><br>
+  <div class="form-container">
+    <h2>Edit Item</h2>
+    <form action="../backend/update_item.php" method="POST">
+      <input type="hidden" name="id" value="<?= $item['id'] ?>">
 
-    <label>Expired Date:</label><br>
-    <input type="date" name="expired_date" value="<?= $item['expired_date'] ?>"><br>
+      <div class="form-group">
+        <label>Item Code:</label>
+        <input type="text" name="item_code" value="<?= htmlspecialchars($item['item_code']) ?>" required>
+      </div>
 
-    <label>Note:</label><br>
-    <input type="text" name="note" value="<?= $item['note'] ?>"><br><br>
+      <div class="form-group">
+        <label>Item Name:</label>
+        <input type="text" name="item_name" value="<?= htmlspecialchars($item['item_name']) ?>" required>
+      </div>
 
-    <button type="submit">Update</button>
-  </form>
-</div>
+      <div class="form-group">
+        <label>Quantity:</label>
+        <input type="number" step="0.01" name="quantity" value="<?= htmlspecialchars($item['quantity']) ?>">
+      </div>
+
+      <div class="form-group">
+        <label>Expired Date:</label>
+        <input type="date" name="expired_date" value="<?= htmlspecialchars($item['expired_date']) ?>">
+      </div>
+
+      <div class="form-group">
+        <label>Note:</label>
+        <input type="text" name="note" value="<?= htmlspecialchars($item['note']) ?>">
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn-orange">Update</button>
+        <a href="index.php" class="btn-orange btn-cancel">Cancel</a>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>

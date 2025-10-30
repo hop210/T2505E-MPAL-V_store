@@ -1,30 +1,184 @@
+/* ---------- Reset & Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
 }
 
+/* ---------- Header ---------- */
+.header-band {
+  background: #e76f51;
+  color: #fff;
+  padding: 14px 0;
+}
+.header-inner {
+  max-width: 1000px;      /* cùng kích thước container */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0 30px;        /* khớp padding container */
+}
+.header-inner span:first-child {
+  font-weight: 800;
+}
+.header-band span:first-child {
+  font-weight: 800;
+}
+
+/* ---------- Page Container ---------- */
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 30px auto;
   background: #fff;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 5px #aaa;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
+/* ---------- Page Title ---------- */
+.page-title {
+  text-align: center;
+  color: #d79a00;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Add New Button ---------- */
+.add-btn {
+  display: inline-block;
+  background: #e76f51;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.add-btn:hover {
+  background: #c75c3f;
+}
+
+/* ---------- Table ---------- */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
 }
-
+thead {
+  background: #e76f51;
+  color: #fff;
+}
 th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  padding: 10px 12px;
   text-align: center;
 }
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+tbody tr:hover {
+  background: #f2f2f2;
+}
 
-a {
-  text-decoration: none;
-  color: #007bff;
+/* ---------- Action buttons ---------- */
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* nằm ngang, cách nhau nhẹ */
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  stroke: #e76f51;
+  transition: 0.2s;
+}
+.icon:hover {
+  stroke: #b54732;
+  transform: scale(1.1);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #e76f51;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 25px;
+  padding: 8px 0;
+  border-radius: 6px;
+}
+/* ---------- Form Page (create / edit) ---------- */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #d79a00;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus {
+  border-color: #e76f51;
+  box-shadow: 0 0 4px rgba(231,111,81,0.3);
+  outline: none;
+}
+
+.btn-row {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-orange {
+  background: #e76f51;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn-orange:hover {
+  background: #c75c3f;
+}
+.btn-cancel {
+  margin-left: 10px;
+  background: #999;
+}
+.btn-cancel:hover {
+  background: #777;
 }

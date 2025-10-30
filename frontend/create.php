@@ -2,30 +2,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sale Item</title>
+  <meta charset="utf-8">
+  <title>Add Item - V_Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <h2>Create Item</h2>
-  <form method="POST" action="../backend/add_item.php">
-    <label>Item Code:</label><br>
-    <input type="text" name="item_code" required pattern="[A-Za-z0-9]+"><br>
 
-    <label>Item Name:</label><br>
-    <input type="text" name="item_name" required pattern="[A-Za-z0-9\s]+"><br>
+  <!-- Header -->
+  <div class="header-band">
+    <div class="header-inner">
+      <span>V_Store</span>
+      <span>Items</span>
+    </div>
+  </div>
 
-    <label>Quantity:</label><br>
-    <input type="number" step="0.01" name="quantity" required><br>
+  <div class="form-container">
+    <h2>Add New Item</h2>
+    <form action="../backend/add_item.php" method="POST">
+      <div class="form-group">
+        <label>Item Code:</label>
+        <input type="text" name="item_code" required pattern="[A-Za-z0-9]+">
+      </div>
 
-    <label>Expired Date:</label><br>
-    <input type="date" name="expired_date" required><br>
+      <div class="form-group">
+        <label>Item Name:</label>
+        <input type="text" name="item_name" required pattern="[A-Za-z0-9\s]+">
+      </div>
 
-    <label>Note:</label><br>
-    <input type="text" name="note"><br><br>
+      <div class="form-group">
+        <label>Quantity:</label>
+        <input type="number" step="0.01" name="quantity" required>
+      </div>
 
-    <button type="submit">Save</button>
-  </form>
-</div>
+      <div class="form-group">
+        <label>Expired Date:</label>
+        <input type="date" name="expired_date" required>
+      </div>
+
+      <div class="form-group">
+        <label>Note:</label>
+        <input type="text" name="note">
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn-orange">Save</button>
+        <a href="index.php" class="btn-orange btn-cancel">Cancel</a>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>
