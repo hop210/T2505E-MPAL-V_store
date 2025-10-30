@@ -13,14 +13,13 @@ body {
   padding: 14px 0;
 }
 .header-inner {
-  max-width: 1000px;      /* cùng kích thước container */
-  margin: 0 auto;
+  max-width: 1000px;      
   display: flex;
   align-items: center;
   gap: 40px;
   font-weight: 700;
   font-size: 20px;
-  padding: 0 30px;        /* khớp padding container */
+  padding: 0 30px;        
 }
 .header-inner span:first-child {
   font-weight: 800;
@@ -92,7 +91,7 @@ tbody tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* nằm ngang, cách nhau nhẹ */
+  gap: 10px; 
 }
 
 .icon {
