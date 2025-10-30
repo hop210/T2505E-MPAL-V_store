@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Thêm Item</title>
+  <title>Sale Item</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-  <h2>Thêm Item mới</h2>
+  <h2>Create Item</h2>
   <form method="POST" action="../backend/add_item.php">
     <label>Item Code:</label><br>
     <input type="text" name="item_code" required pattern="[A-Za-z0-9]+"><br>
@@ -24,7 +24,7 @@
     <label>Note:</label><br>
     <input type="text" name="note"><br><br>
 
-    <button type="submit">Lưu</button>
+    <button type="submit">Save</button>
   </form>
 </div>
 </body>

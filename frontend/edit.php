@@ -8,12 +8,12 @@ $item = $stmt->fetch(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sửa Item</title>
+  <title>Update Item</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-  <h2>Sửa Item</h2>
+  <h2>Update Item</h2>
   <form method="POST" action="../backend/update_item.php">
     <input type="hidden" name="id" value="<?= $item['id'] ?>">
     <label>Item Code:</label><br>
@@ -31,7 +31,7 @@ $item = $stmt->fetch(PDO::FETCH_ASSOC);
     <label>Note:</label><br>
     <input type="text" name="note" value="<?= $item['note'] ?>"><br><br>
 
-    <button type="submit">Cập nhật</button>
+    <button type="submit">Update</button>
   </form>
 </div>
 </body>
